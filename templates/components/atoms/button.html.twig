@@ -1,0 +1,22 @@
+{% set button_text = button_text|default('') %}
+
+{% set button_modifiers = button_modifiers|default([]) %}
+
+{% set button_modifiersList = {
+    'primary': 'button--primary',
+    'secondary': 'button--secondary',
+} %}
+
+<div class="m-5">
+    <button
+            class="button {% for key, value in button_modifiersList %}
+                {% if key in button_modifiers%}{{ value }}{% endif %}
+            {% endfor %}"
+    >{{ button_text }}</button>
+
+    <div class="card__body">
+        <div class="h-[150px] flex items-center justify-center">
+            bonjour
+        </div>
+    </div>
+</div>

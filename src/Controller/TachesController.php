@@ -16,5 +16,23 @@ class TachesController extends AbstractController
         ]);
     }
 
-    public function 
+    public function afficherTaches(): Response
+    {
+
+    }
+
+    public function creerTache(): Response
+    {
+
+    }
+    public function supprimerTache(): Response
+    {
+
+    }
+
+    public function isCheck(): Response
+    {
+
+    }
+
 }
