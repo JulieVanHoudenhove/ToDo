@@ -62,7 +62,6 @@ TwigFilesRaw.keys().forEach(TwigFilesRaw);
 //
 // /* Twig configuration */
 const renderTwig = (path, args = {}) => {
-    console.log('renderTwig', path, args);
     return new Promise((resolve) => {
         Twig.twig({
             namespaces: { AppFront: 'templates/' },

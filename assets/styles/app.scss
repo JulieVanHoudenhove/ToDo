@@ -5,9 +5,12 @@
 @tailwind utilities;
 
 @import '../../templates/components/atoms/button.style.scss';
-@import '../../templates/components/atoms/h1.style.scss';
-@import '../../templates/components/atoms/h2.style.scss';
-@import '../../templates/components/atoms/h3.style.scss';
+@import '../../templates/components/atoms/title.style.scss';
 @import '../../templates/components/atoms/p.style.scss';
 @import '../../templates/components/atoms/i.style.scss';
 @import '../../templates/components/atoms/a.style.scss';
+@import '../../templates/components/atoms/hr.style.scss';
+@import '../../templates/components/molecules/header.style.scss';
+@import '../../templates/components/molecules/form.style.scss';
+@import '../../templates/components/molecules/task.style.scss';
+@import '../../templates/components/molecules/article.style.scss';

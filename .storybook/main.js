@@ -27,7 +27,6 @@ const config = {
   docs: {
     autodocs: "tag",
   },
-
   webpackFinal: async (config) => {
     config.module.rules = [
       ...config.module.rules,

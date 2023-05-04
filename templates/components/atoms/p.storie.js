@@ -1,29 +1,29 @@
 import {TwigComponent} from "@/twig";
 
-const TwigPath = require('./h2.html.twig').default;
+const TwigPath = require('./p.html.twig').default;
 export default {
-    title: 'Atoms/H2',
+    title: 'Atoms/P',
     argTypes: {
-        h2_text: {
+        p_text: {
             control: 'text',
-            defaultValue: 'H2 Text',
+            defaultValue: 'p Text',
         }
     }
 }
 
 const Template = (args) => ({
     components: {
-        H2: TwigComponent(TwigPath, {
+        P: TwigComponent(TwigPath, {
             ...args,
         }),
     },
     template: `
     <Suspense>
-    <H2 />
+    <P />
     </Suspense>`,
 })
 
 export const Default = Template.bind({});
 Default.args = {
-    h2_text: 'H2 Text',
+    p_text: 'p Text',
 };

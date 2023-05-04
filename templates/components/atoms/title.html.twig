@@ -1,0 +1,16 @@
+{% set title_text = title_text|default('') %}
+{% set title_tag = title_tag|default('h2') %}
+
+{% set title_modifiers = title_modifiers|default([]) %}
+
+{% set title_modifiersList = {
+    'xs': 'title--xs',
+    'md': 'title--md',
+    'lg': 'title--lg',
+    'uncomplete': 'title--uncomplete',
+    'complete': 'title--complete',
+} %}
+
+<{{ title_tag }} class="title {% for key, value in title_modifiersList %}
+    {% if key in title_modifiers%}{{ value }}{% endif %}
+{% endfor %}">{{ title_text }}</{{ title_tag }}>

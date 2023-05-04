@@ -1,0 +1,25 @@
+{% set task_complete = task_complete|default(0) %}
+
+<label class="label">
+    <div>
+        <div>
+            <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+            {% include 'components/atoms/title.html.twig' with {
+                title_text: 'Submit 2019 tax return',
+                title_tag: 'h2',
+                title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],
+            } %}
+        </div>
+        {% include 'components/atoms/a.html.twig' with {
+            a_modifiers: task_complete ? ['complete'] : ['uncomplete']
+        } %}
+    </div>
+    <div class="details">
+        {% include 'components/atoms/p.html.twig' with {
+            p_text: '🔴  Très Urgent',
+        } %}
+        {% include 'components/atoms/p.html.twig' with {
+            p_text: '03 mai 2023',
+        } %}
+    </div>
+</label>

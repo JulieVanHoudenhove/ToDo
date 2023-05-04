@@ -1,6 +1,8 @@
-<header>
-    {% include 'components/atoms/h1.html.twig' with {
-        h1_text: 'To-Do List',
+<header class="header">
+    {% include 'components/atoms/title.html.twig' with {
+        title_text: 'To-Do List',
+        title_tag: 'h1',
+        title_modifiers: ['lg'],
     } %}
     {% include 'components/atoms/i.html.twig' %}
 </header>

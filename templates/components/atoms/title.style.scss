@@ -1,0 +1,32 @@
+.title {
+  font-family: 'Inter', sans-serif;
+
+  &--xs {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    color: #f2f2f2;
+  }
+
+  &--md {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 10px;
+  }
+
+  &--lg {
+    font-weight: 700;
+    font-size: 32px;
+    color: #0E0E11;
+    text-shadow: (0 3px 7px rgba($color: #000000, $alpha: .25));
+  }
+
+  &--uncomplete {
+    color: #575767;
+  }
+
+  &--complete {
+    color: #b9b9be;
+  }
+}

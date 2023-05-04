@@ -1,0 +1,32 @@
+.label {
+  div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    cursor: pointer;
+
+    div {
+
+      margin-top: 0;
+
+      .checkbox {
+        height: 24px;
+        width: 24px;
+        border-radius: 6px;
+        border: 2px solid #dadada;
+        background-color: #fcfcfc;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 5px 0 15px 0;
+    }
+  }
+
+}

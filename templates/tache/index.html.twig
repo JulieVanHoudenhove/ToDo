@@ -5,22 +5,10 @@
 {% block body %}
     <h1>Tache index</h1>
 
-    {% include 'components/atoms/h1.html.twig' with {
-        h1_text: 'Bonjour H1',
-    } %}
-
-    {% include 'components/atoms/h2.html.twig' with {
-        h2_text: 'Bonjour H2 Uncomplete',
-        h2_modifiers: ['uncomplete'],
-    } %}
-
-    {% include 'components/atoms/h2.html.twig' with {
-        h2_text: 'Bonjour H2 complete',
-        h2_modifiers: ['complete'],
-    } %}
-
-    {% include 'components/atoms/h3.html.twig' with {
-        h3_text: 'Bonjour H3',
+    {% include 'components/atoms/title.html.twig' with {
+        title_text: 'Bonjour H1',
+        title_tag: 'h1',
+        title_modifiers: ['lg ', 'complete'],
     } %}
 
     {% include 'components/atoms/p.html.twig' with {
@@ -43,6 +31,13 @@
 
     {% include 'components/molecules/header.html.twig' %}
 
+    {% include 'components/molecules/form.html.twig' %}
+
+    {% include 'components/molecules/task.html.twig' %}
+
+    {% include 'components/molecules/article.html.twig' %}
+
+    <br><br><br>
     <table class="table">
         <thead>
             <tr>
