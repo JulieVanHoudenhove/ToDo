@@ -60,6 +60,23 @@ body form div {
 body form div #date {
   color: #575767;
   cursor: pointer;
+  border: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-month-field {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
 }
 body form div button {
   height: 35px;
