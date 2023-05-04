@@ -31,6 +31,18 @@
         button_text: '+',
     } %}
 
+    {% include 'components/atoms/i.html.twig' %}
+
+    {% include 'components/atoms/a.html.twig' with {
+        a_modifiers: ['uncomplete'],
+    } %}
+
+    {% include 'components/atoms/a.html.twig' with {
+        a_modifiers: ['complete'],
+    } %}
+
+    {% include 'components/molecules/header.html.twig' %}
+
     <table class="table">
         <thead>
             <tr>

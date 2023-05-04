@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,6 +21,7 @@
 }
 
 .h2 {
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -43,6 +45,25 @@
   font-weight: 600;
   font-size: 14px;
   color: #b9b9be;
+}
+
+.i {
+  color: #0E0E11;
+  font-size: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.a {
+  text-decoration: none;
+  font-size: 19px;
+  margin-top: 5px;
+}
+.a--uncomplete {
+  color: #b9b9be;
+}
+.a--complete {
+  color: #575767;
 }
 
 /*# sourceMappingURL=app.css.map */

@@ -31,15 +31,13 @@ body header .fa-moon {
 }
 body form {
   padding: 7px 0;
-}
-body form div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin: 5px;
 }
-body form div #title {
+body form #title {
   font-weight: 600;
   font-size: 14px;
   color: #575767;
@@ -47,19 +45,23 @@ body form div #title {
   width: 100%;
   background-color: transparent;
 }
-body form div div {
+body form hr {
+  background-color: #575767;
+  margin: 10px 0;
+  width: 100%;
+}
+body form div {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
-body form div div #date {
-  border: none;
+body form div #date {
   color: #575767;
-  background-color: transparent;
   cursor: pointer;
 }
-body form div div button {
+body form div button {
   height: 35px;
   width: 35px;
   background-color: #515cc6;
@@ -68,10 +70,6 @@ body form div div button {
   border-radius: 50%;
   text-align: center;
   cursor: pointer;
-}
-body form hr {
-  background-color: #575767;
-  margin: 0 0 10px 0;
 }
 body section .uncomplete div {
   display: flex;

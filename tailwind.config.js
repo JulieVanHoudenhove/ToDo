@@ -89,7 +89,7 @@ module.exports = {
       'm-0': '0',
       'm-1.5': '5px',
       'm-2.5': '10px',
-      'm-hr': 'margin: 0 0 10px 0;',
+      'm-hr': 'margin: 10px 0;',
       'm-details': 'margin: 5px 0 15px 0;',
       'm-body': 'margin: 40px 30px;',
       'm-header': 'margin: 20px 0;',

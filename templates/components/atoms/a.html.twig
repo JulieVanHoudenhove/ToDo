@@ -1,0 +1,9 @@
+{% set a_modifiers = a_modifiers|default([]) %}
+
+{% set a_modifiersList = {
+    'uncomplete': 'a--uncomplete',
+    'complete': 'a--complete',
+} %}
+<a class="a {% for key, value in a_modifiersList %}
+                {% if key in a_modifiers%}{{ value }}{% endif %}
+            {% endfor %}"><i class="fa-solid fa-trash"></i></a>

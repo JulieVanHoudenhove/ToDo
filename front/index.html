@@ -14,21 +14,18 @@
         <i class="fa-regular fa-moon"></i>
     </header>
     <form action="">
-        <div>
-            <input type="text" id="title" required placeholder="Je dois faire...">
-            <div>
-                <select name="priority">
-                    <option value="">Urgence de la tâche</option>
-                    <option value="1">🔴  Très Urgent</option>
-                    <option value="2">🟠  Urgent</option>
-                    <option value="3">🟡  Peu Urgent</option>
-                    <option value="4">🟢  Pas Urgent</option>
-                </select>
-                <input type="date" id="date" required>
-                <button>+</button>
-            </div>
-        </div>
+        <input type="text" id="title" required placeholder="Je dois faire...">
         <hr>
+        <div>
+            <select name="priority">
+                <option value="1">🔴  Très Urgent</option>
+                <option value="2">🟠  Urgent</option>
+                <option value="3">🟡  Peu Urgent</option>
+                <option value="4">🟢  Pas Urgent</option>
+            </select>
+            <input type="date" id="date" required>
+            <button>+</button>
+        </div>
     </form>
 
     <section>

@@ -1,0 +1,13 @@
+.a {
+  text-decoration: none;
+  font-size: 19px;
+  margin-top: 5px;
+
+  &--uncomplete {
+    color: #b9b9be;
+  }
+
+  &--complete {
+    color: #575767;
+  }
+}

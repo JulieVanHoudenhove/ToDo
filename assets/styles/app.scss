@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,4 +9,5 @@
 @import '../../templates/components/atoms/h2.style.scss';
 @import '../../templates/components/atoms/h3.style.scss';
 @import '../../templates/components/atoms/p.style.scss';
-
+@import '../../templates/components/atoms/i.style.scss';
+@import '../../templates/components/atoms/a.style.scss';
