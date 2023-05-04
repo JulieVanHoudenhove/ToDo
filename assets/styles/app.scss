@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: lightgray;
-}
+@import '../../templates/components/atoms/button.style.scss';
+@import '../../templates/components/atoms/h1.style.scss';
+@import '../../templates/components/atoms/h2.style.scss';
+@import '../../templates/components/atoms/h3.style.scss';
+@import '../../templates/components/atoms/p.style.scss';
+

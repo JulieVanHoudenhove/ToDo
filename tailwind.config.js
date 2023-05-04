@@ -3,7 +3,7 @@ module.exports = {
   content: [
     "./assets/**/*.js",
     "./templates/**/*.html.twig",
-    "./templates/**/*.style.scss",
+    "./templates/**/**/*.style.scss",
   ],
   theme: {
     colors: {

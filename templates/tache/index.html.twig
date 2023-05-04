@@ -5,9 +5,30 @@
 {% block body %}
     <h1>Tache index</h1>
 
+    {% include 'components/atoms/h1.html.twig' with {
+        h1_text: 'Bonjour H1',
+    } %}
+
+    {% include 'components/atoms/h2.html.twig' with {
+        h2_text: 'Bonjour H2 Uncomplete',
+        h2_modifiers: ['uncomplete'],
+    } %}
+
+    {% include 'components/atoms/h2.html.twig' with {
+        h2_text: 'Bonjour H2 complete',
+        h2_modifiers: ['complete'],
+    } %}
+
+    {% include 'components/atoms/h3.html.twig' with {
+        h3_text: 'Bonjour H3',
+    } %}
+
+    {% include 'components/atoms/p.html.twig' with {
+        p_text: 'Bonjour un paragraphe Lorem Ipsum',
+    } %}
+
     {% include 'components/atoms/button.html.twig' with {
-        button_text: 'Bonjour',
-        button_modifiers: ['primary'],
+        button_text: '+',
     } %}
 
     <table class="table">

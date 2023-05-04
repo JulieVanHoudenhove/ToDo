@@ -1,11 +1,11 @@
 .button {
-  background-color: red;
-
-  &--primary {
-    color: blue;
-  }
-
-  &--secondary {
-    color: green;
-  }
+  height: 35px;
+  width: 35px;
+  background-color: #515cc6;
+  color: #fff;
+  // font-size: 20px;
+  border: 2px solid #515cc6;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
 }

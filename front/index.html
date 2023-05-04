@@ -17,6 +17,13 @@
         <div>
             <input type="text" id="title" required placeholder="Je dois faire...">
             <div>
+                <select name="priority">
+                    <option value="">Urgence de la tâche</option>
+                    <option value="1">🔴  Très Urgent</option>
+                    <option value="2">🟠  Urgent</option>
+                    <option value="3">🟡  Peu Urgent</option>
+                    <option value="4">🟢  Pas Urgent</option>
+                </select>
                 <input type="date" id="date" required>
                 <button>+</button>
             </div>
@@ -101,19 +108,6 @@
             </div>
             <div class="details">
                 <p>🟠  Urgent</p>
-                <p>03 mai 2023</p>
-            </div>
-        </label>
-        <label class="complete">
-            <div>
-                <div>
-                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
-                    <h2>Look at new plugins</h2>
-                </div>
-                <a href="/delete"><i class="fa-solid fa-trash"></i></a>
-            </div>
-            <div class="details">
-                <p>🟡  Peu Urgent</p>
                 <p>03 mai 2023</p>
             </div>
         </label>
