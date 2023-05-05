@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap");
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 40px 30px;
+  background-color: #f8f8f8;
+}
+body header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+body header h1 {
+  font-weight: 700;
+  font-size: 32px;
+  color: #0E0E11;
+  text-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
+}
+body header .fa-moon {
+  color: #0E0E11;
+  font-size: 25px;
+  margin: 10px;
+  cursor: pointer;
+}
+body form {
+  padding: 7px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+body form #title {
+  font-weight: 600;
+  font-size: 14px;
+  color: #575767;
+  border: none;
+  width: 100%;
+  background-color: transparent;
+}
+body form hr {
+  background-color: #575767;
+  margin: 10px 0;
+  width: 100%;
+}
+body form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+body form div #date {
+  color: #575767;
+  cursor: pointer;
+  border: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-text {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-month-field {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-day-field {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div input[type=date]::-webkit-datetime-edit-year-field {
+  -webkit-appearance: none;
+  display: none;
+}
+body form div button {
+  height: 35px;
+  width: 35px;
+  background-color: #515cc6;
+  color: #fff;
+  border: 2px solid #515cc6;
+  border-radius: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+body section .uncomplete div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+body section .uncomplete div div {
+  margin-top: 0;
+}
+body section .uncomplete div div .checkbox {
+  height: 24px;
+  width: 24px;
+  border-radius: 6px;
+  border: 2px solid #dadada;
+  background-color: #fcfcfc;
+}
+body section .uncomplete div div h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #575767;
+  margin-left: 10px;
+}
+body section .uncomplete div a {
+  color: #b9b9be;
+  text-decoration: none;
+  font-size: 19px;
+  margin-top: 5px;
+}
+body section .uncomplete .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px 0 15px 0;
+}
+body section .uncomplete .details p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #b9b9be;
+}
+body section .complete div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+body section .complete div div {
+  margin-top: 0;
+}
+body section .complete div div .checkbox {
+  height: 24px;
+  width: 24px;
+  border-radius: 6px;
+  border: 2px solid #dadada;
+  background-color: #fcfcfc;
+}
+body section .complete div div h2 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b9b9be;
+  margin-left: 10px;
+}
+body section .complete div a {
+  color: #575767;
+  text-decoration: none;
+  font-size: 19px;
+  margin-top: 5px;
+}
+body section .complete .details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5px 0 15px 0;
+}
+body section .complete .details p {
+  font-weight: 600;
+  font-size: 14px;
+  color: #b9b9be;
+}
+body article {
+  background-color: #515cc6;
+  height: 10vh;
+  width: 100%;
+  border-radius: 50% 50% 0 0/100% 100% 0 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+body article h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #f2f2f2;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/807117854c.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <title>To Do</title>
+</head>
+<body>
+
+    <div x-data="{
+        todos: [
+            { id: 1, name: 'Submit 2019 tax return', priority: '🔴  Très Urgent', date: '04 mai 2023', isDone: false },
+            { id: 2, name: 'Print parking passes', priority: '🟠  Urgent', date: '04 mai 2023', isDone: false },
+            { id: 3, name: 'Sign contract, send back', priority: '🟡  Peu Urgent', date: '04 mai 2023', isDone: false },
+            { id: 4, name: 'Hand sanitizer', priority: '🟢  Pas Urgent', date: '04 mai 2023', isDone: false },
+            { id: 5, name: 'Upload 1099-R to TurboTax', priority: '🔴  Très Urgent', date: '04 mai 2023', isDone: false },
+            { id: 6, name: 'Check on FedEx Order', priority: '🟠  Urgent', date: '04 mai 2023', isDone: false },
+            { id: 7, name: 'Look at new plugins', priority: '🟡  Peu Urgent', date: '04 mai 2023', isDone: false },
+        ],
+
+        newTodoName: '',
+
+        addNewTodo() {
+            this.todos.push({
+                id: this.todos.length + 1,
+                name: this.newTodoName,
+                isDone: false
+            });
+
+            this.newTodoName = '';
+        },
+
+        deleteTodo(index) {
+            this.todos.splice(index, 1);
+        }
+    }">
+        <header>
+            <h1>To-Do List</h1>
+            <i class="fa-regular fa-moon"></i>
+        </header>
+<!--        <form>-->
+        <form>
+            <input x-model="newTodoName" x-on:keydown.enter="addNewTodo" type="text" id="title" required placeholder="Je dois faire...">
+            <hr>
+        </form>
+<!--            <div>-->
+<!--                <select name="priority">-->
+<!--                    <option value="1">🔴  Très Urgent</option>-->
+<!--                    <option value="2">🟠  Urgent</option>-->
+<!--                    <option value="3">🟡  Peu Urgent</option>-->
+<!--                    <option value="4">🟢  Pas Urgent</option>-->
+<!--                </select>-->
+<!--                <input type="date" id="date" required>-->
+<!--                <button x-on:click="addNewTodo">+</button>-->
+<!--            </div>-->
+<!--        </form>-->
+<!--        <input type="text" x-model="newTodoName" x-on:keydown.enter="addNewTodo" placeholder="Je dois faire..." class="border border-gray-100 my-5">-->
+
+<!--        <template x-for="todo, index in todos" :key="todo.id">-->
+<!--            <div class="flex items-center" x-bind:class="{'line-through': todo.isDone}">-->
+<!--                <input type="checkbox" x-model="todo.isDone">-->
+<!--                <span class="mx-5" x-text="todo.name"></span>-->
+<!--                <button x-on:click="deleteTodo(index)">Supprimer</button>-->
+<!--            </div>-->
+<!--        </template>-->
+
+        <section >
+            <template x-for="todo, index in todos" :key="todo.id">
+                <div  x-bind:class="{'complete': todo.isDone}" class="uncomplete">
+                    <div>
+                        <div>
+                            <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" x-model="todo.isDone">
+                            <h2 x-text="todo.name"></h2>
+                        </div>
+                        <a x-on:click="deleteTodo(index)"><i class="fa-solid fa-trash"></i></a>
+                    </div>
+                    <div class="details">
+                        <p x-text="todo.priority"></p>
+                        <p  x-text="todo.date"></p>
+                    </div>
+                </div>
+
+            </template>
+        </section>
+
+    </div>
+
+</body>
+</html>
