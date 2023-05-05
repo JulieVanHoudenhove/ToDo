@@ -5,37 +5,37 @@
 {% block body %}
     <h1>Tache index</h1>
 
-    {% include 'components/atoms/title.html.twig' with {
-        title_text: 'Bonjour H1',
-        title_tag: 'h1',
-        title_modifiers: ['lg ', 'complete'],
-    } %}
+{#    {% include 'components/atoms/title.html.twig' with {#}
+{#        title_text: 'Bonjour H1',#}
+{#        title_tag: 'h1',#}
+{#        title_modifiers: ['lg ', 'complete'],#}
+{#    } %}#}
 
-    {% include 'components/atoms/p.html.twig' with {
-        p_text: 'Bonjour un paragraphe Lorem Ipsum',
-    } %}
+{#    {% include 'components/atoms/p.html.twig' with {#}
+{#        p_text: 'Bonjour un paragraphe Lorem Ipsum',#}
+{#    } %}#}
 
-    {% include 'components/atoms/button.html.twig' with {
-        button_text: '+',
-    } %}
+{#    {% include 'components/atoms/button.html.twig' with {#}
+{#        button_text: '+',#}
+{#    } %}#}
 
-    {% include 'components/atoms/i.html.twig' %}
+{#    {% include 'components/atoms/i.html.twig' %}#}
 
-    {% include 'components/atoms/a.html.twig' with {
-        a_modifiers: ['uncomplete'],
-    } %}
+{#    {% include 'components/atoms/a.html.twig' with {#}
+{#        a_modifiers: ['uncomplete'],#}
+{#    } %}#}
 
-    {% include 'components/atoms/a.html.twig' with {
-        a_modifiers: ['complete'],
-    } %}
+{#    {% include 'components/atoms/a.html.twig' with {#}
+{#        a_modifiers: ['complete'],#}
+{#    } %}#}
 
-    {% include 'components/molecules/header.html.twig' %}
+{#    {% include 'components/molecules/header.html.twig' %}#}
 
-    {% include 'components/molecules/form.html.twig' %}
+{#    {% include 'components/molecules/form.html.twig' %}#}
 
-    {% include 'components/molecules/task.html.twig' %}
+{#    {% include 'components/molecules/task.html.twig' %}#}
 
-    {% include 'components/molecules/article.html.twig' %}
+{#    {% include 'components/molecules/article.html.twig' %}#}
 
     <br><br><br>
     <table class="table">
@@ -56,7 +56,7 @@
                 <td>{{ tache.title }}</td>
                 <td>{{ tache.priority }}</td>
                 <td>{{ tache.checked ? 'Yes' : 'No' }}</td>
-                <td>{{ tache.date ? tache.date|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ tache.date ? tache.date|date('Y-m-d') : '' }}</td>
                 <td>
                     <a href="{{ path('app_tache_show', {'id': tache.id}) }}">show</a>
                     <a href="{{ path('app_tache_edit', {'id': tache.id}) }}">edit</a>
