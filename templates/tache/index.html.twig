@@ -38,25 +38,28 @@
 {#    {% include 'components/molecules/article.html.twig' %}#}
 
     <br><br><br>
+    {{ include ('components/molecules/header.html.twig') }}
+    {{ include ('components/molecules/form.html.twig') }}
+
+    {{ include ('components/molecules/article.html.twig') }}
+
     <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Priority</th>
-                <th>Checked</th>
-                <th>Date</th>
-                <th>actions</th>
-            </tr>
-        </thead>
         <tbody>
         {% for tache in taches %}
+{#            {% embed "components/molecules/task.html.twig" with {#}
+{#                'title_text': 'tache_text',#}
+{#                title_tag: 'h2',#}
+{#                title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],#}
+{#                a_modifiers: task_complete ? ['complete'] : ['uncomplete'],#}
+{#                p_text: 'tache.priority',#}
+{#                p_text: 'tache.date|date(\'d m Y\')',#}
+{#            } %}{% endembed %}#}
             <tr>
                 <td>{{ tache.id }}</td>
                 <td>{{ tache.title }}</td>
                 <td>{{ tache.priority }}</td>
                 <td>{{ tache.checked ? 'Yes' : 'No' }}</td>
-                <td>{{ tache.date ? tache.date|date('Y-m-d') : '' }}</td>
+                <td>{{ tache.date ? tache.date|date('d m Y') : '' }}</td>
                 <td>
                     <a href="{{ path('app_tache_show', {'id': tache.id}) }}">show</a>
                     <a href="{{ path('app_tache_edit', {'id': tache.id}) }}">edit</a>
