@@ -23,11 +23,15 @@
         ],
 
         newTodoName: '',
+        newTodoPriority: '',
+        newTodoDate: '',
 
         addNewTodo() {
             this.todos.push({
                 id: this.todos.length + 1,
                 name: this.newTodoName,
+                priority: this.newTodoPriority,
+                date: this.newTodoDate,
                 isDone: false
             });
 
@@ -43,34 +47,24 @@
             <i class="fa-regular fa-moon"></i>
         </header>
 <!--        <form>-->
-        <form>
-            <input x-model="newTodoName" x-on:keydown.enter="addNewTodo" type="text" id="title" required placeholder="Je dois faire...">
+        <form x-on:keydown.enter="addNewTodo">
+            <input x-model="newTodoName" type="text" id="title" required placeholder="Je dois faire...">
             <hr>
-        </form>
-<!--            <div>-->
-<!--                <select name="priority">-->
-<!--                    <option value="1">🔴  Très Urgent</option>-->
-<!--                    <option value="2">🟠  Urgent</option>-->
-<!--                    <option value="3">🟡  Peu Urgent</option>-->
-<!--                    <option value="4">🟢  Pas Urgent</option>-->
-<!--                </select>-->
-<!--                <input type="date" id="date" required>-->
+            <div>
+                <select x-model="newTodoPriority" name="priority">
+                    <option value="🔴  Très Urgent">🔴  Très Urgent</option>
+                    <option value="🟠  Urgent">🟠  Urgent</option>
+                    <option value="🟡  Peu Urgent">🟡  Peu Urgent</option>
+                    <option value="🟢  Pas Urgent">🟢  Pas Urgent</option>
+                </select>
+                <input x-model="newTodoDate" type="date" id="date" required>
 <!--                <button x-on:click="addNewTodo">+</button>-->
-<!--            </div>-->
-<!--        </form>-->
-<!--        <input type="text" x-model="newTodoName" x-on:keydown.enter="addNewTodo" placeholder="Je dois faire..." class="border border-gray-100 my-5">-->
-
-<!--        <template x-for="todo, index in todos" :key="todo.id">-->
-<!--            <div class="flex items-center" x-bind:class="{'line-through': todo.isDone}">-->
-<!--                <input type="checkbox" x-model="todo.isDone">-->
-<!--                <span class="mx-5" x-text="todo.name"></span>-->
-<!--                <button x-on:click="deleteTodo(index)">Supprimer</button>-->
-<!--            </div>-->
-<!--        </template>-->
+            </div>
+        </form>
 
         <section >
             <template x-for="todo, index in todos" :key="todo.id">
-                <div  x-bind:class="{'complete': todo.isDone}" class="uncomplete">
+                <div x-bind:class="{'complete': todo.isDone}" class="uncomplete">
                     <div>
                         <div>
                             <input class="checkbox" type="checkbox" name="checkbox" id="checkbox" x-model="todo.isDone">
@@ -80,13 +74,15 @@
                     </div>
                     <div class="details">
                         <p x-text="todo.priority"></p>
-                        <p  x-text="todo.date"></p>
+                        <p x-text="todo.date"></p>
                     </div>
                 </div>
 
             </template>
         </section>
-
+<!--        <article>-->
+<!--            <h3>Tâches : 2/7</h3>-->
+<!--        </article>-->
     </div>
 
 </body>
