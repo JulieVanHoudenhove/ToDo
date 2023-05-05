@@ -25,6 +25,7 @@ class TacheType extends AbstractType
             ->add('priority', ChoiceType::class, [
                 'label' => false,
                 'choices' => [
+                    '' => 'Urgence de la tâche',
                     '🔴  Très Urgent' => '1',
                     '🟠  Urgent' => '2',
                     '🟡  Peu Urgent' => '3',
