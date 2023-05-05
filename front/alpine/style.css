@@ -78,7 +78,7 @@ body form div input[type=date]::-webkit-datetime-edit-year-field {
   -webkit-appearance: none;
   display: none;
 }
-body form div button {
+body form div a {
   height: 35px;
   width: 35px;
   background-color: #515cc6;
@@ -129,6 +129,7 @@ body section .uncomplete .details p {
   font-weight: 600;
   font-size: 14px;
   color: #b9b9be;
+  width: 103px;
 }
 body section .complete div {
   display: flex;
