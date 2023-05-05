@@ -6,47 +6,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/807117854c.js" crossorigin="anonymous"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
     <title>To Do</title>
 </head>
 <body>
-    <header>
-        <h1>To-Do List</h1>
-        <i class="fa-regular fa-moon"></i>
-    </header>
-    <form action="">
-        <input type="text" id="title" required placeholder="Je dois faire...">
-        <hr>
-        <div>
-            <select name="priority">
-                <option value="1">🔴  Très Urgent</option>
-                <option value="2">🟠  Urgent</option>
-                <option value="3">🟡  Peu Urgent</option>
-                <option value="4">🟢  Pas Urgent</option>
-            </select>
-            <input type="date" id="date" required>
-            <button>+</button>
-        </div>
-    </form>
+<header>
+    <h1>To-Do List</h1>
+    <i class="fa-regular fa-moon"></i>
+</header>
+<form action="">
+    <input type="text" id="title" required placeholder="Je dois faire...">
+    <hr>
+    <div>
+        <select name="priority">
+            <option value="1">🔴  Très Urgent</option>
+            <option value="2">🟠  Urgent</option>
+            <option value="3">🟡  Peu Urgent</option>
+            <option value="4">🟢  Pas Urgent</option>
+        </select>
+        <input type="date" id="date" required>
+        <button>+</button>
+    </div>
+</form>
 
-    <section>
-        <label x-for="todo in todos" :key="todo.id" class="uncomplete">
+<section>
+    <label class="uncomplete">
+        <div>
             <div>
-                <div>
-                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
-                    <h2>Submit 2019 tax return</h2>
-                </div>
-                <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Submit 2019 tax return</h2>
             </div>
-            <div class="details">
-                <p>🔴  Très Urgent</p>
-                <p>03 mai 2023</p>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🔴  Très Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+
+    </label>
+    <label class="uncomplete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Print parking passes</h2>
             </div>
-    
-        </label>
-    </section>
-    <article>
-        <h3>Tâches : 2/7</h3>
-    </article>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🟠  Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+    <label class="uncomplete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Sign contract, send back</h2>
+            </div>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🟡  Peu Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+    <label class="uncomplete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Hand sanitizer</h2>
+            </div>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🟢  Pas Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+    <label class="uncomplete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Upload 1099-R to TurboTax</h2>
+            </div>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🔴  Très Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+    <label class="complete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Check on FedEx Order</h2>
+            </div>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🟠  Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+    <label class="complete">
+        <div>
+            <div>
+                <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                <h2>Look at new plugins</h2>
+            </div>
+            <a href="/delete"><i class="fa-solid fa-trash"></i></a>
+        </div>
+        <div class="details">
+            <p>🟡  Peu Urgent</p>
+            <p>03 mai 2023</p>
+        </div>
+    </label>
+</section>
+<article>
+    <h3>Tâches : 2/7</h3>
+</article>
 </body>
 </html>
