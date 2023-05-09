@@ -6,32 +6,38 @@
 {% set task_date_text = task_date_text|default('') %}
 {% set task_id = task_id|default('') %}
 
+{#        axios.get('http://localhost:8000/api/taches/'+{{task_id}} )#}
+{#        .then(function (response) {#}
+{#            console.log(response.data.checked);#}
+{#            if (response.data.checked == false) {#}
+{#                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {#}
+{#                    checked: true#}
+{#                })#}
+
+{#            } else {#}
+{#                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {#}
+{#                    checked: false#}
+{#                })#}
+{#            }#}
+{#        })#}
+
 <div x-data="{
-    isCheck() {
-        axios.get('http://localhost:8000/api/taches/'+{{task_id}} )
-        .then(function (response) {
-            console.log(response.data.checked);
-            if (response.data.checked == false) {
-                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {
-                    checked: true
-                })
-                removeClass('uncomplete');
-                addClass('complete');
-            } else {
-                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {
-                    checked: false
-                })
-                removeClass('complete');
-                addClass('uncomplete');
-            }
+    isChecked: {{ task_complete ? 'true' : 'false' }},
+    updateTask() {
+        axios.put('http://localhost:8000/api/taches/{{task_id}}', {checked: this.isChecked});
+    },
+    init() {
+        $watch('isChecked', () => {
+            this.updateTask();
         })
-    }}
+    }
+    }
 ">
 
-<label class="uncomplete">
+<label :class="isChecked ? 'complete' : 'uncomplete'">
     <div>
         <div>
-            <input x-on:change="isCheck" class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+            <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked" class="checkbox" type="checkbox" name="checkbox" id="checkbox">
             {% include 'components/atoms/title.html.twig' with {
                 title_text: task_text,
                 title_tag: task_tag,

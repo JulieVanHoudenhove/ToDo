@@ -14,6 +14,7 @@
             task_p_text: tache.priority,
             task_date_text: tache.date ? tache.date|date('d/m/Y') : '',
             task_id: tache.id,
+            task_complete: tache.checked,
         } %}
     {% endfor %}
     </section>
