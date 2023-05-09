@@ -4,11 +4,19 @@
 {% set task_complete = task_complete|default(0) %}
 {% set task_p_text = task_p_text|default('') %}
 {% set task_date_text = task_date_text|default('') %}
+{% set task_id = task_id|default('') %}
+
+<div x-data="{
+    isCheck() {
+        axios.get('http://localhost:8000/api/taches/'+{{task_id}} )
+        console.log(axios.get('http://localhost:8000/api/taches/'+{{ task_id }}))
+    }}
+">
 
 <label class="label">
     <div>
         <div>
-            <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+            <input x-on:change="isCheck" class="checkbox" type="checkbox" name="checkbox" id="checkbox">
             {% include 'components/atoms/title.html.twig' with {
                 title_text: task_text,
                 title_tag: task_tag,
@@ -26,3 +34,5 @@
         } %}
     </div>
 </label>
+
+</div>
