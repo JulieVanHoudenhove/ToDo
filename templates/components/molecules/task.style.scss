@@ -20,13 +20,31 @@
         background-color: #fcfcfc;
       }
     }
+    form {
 
-    .details {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      margin: 5px 0 15px 0;
+      padding: 0;
+      margin: 0;
+
+      button {
+        color: #b9b9be;
+        text-decoration: none;
+        font-size: 19px;
+        margin-top: 5px;
+        height: 19px;
+      }
+    }
+
+  }
+  .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 5px 0 15px 0;
+
+    p {
+      font-weight: 600;
+      font-size: 14px;
+      color: #b9b9be;
     }
   }
-
 }

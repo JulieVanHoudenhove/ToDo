@@ -1,30 +1,28 @@
-{% set title_text = title_text|default('') %}
-{% set title_tag = title_tag|default('') %}
-{% set title_modifiers = title_modifiers|default([]) %}
+{% set task_text = task_text|default('') %}
+{% set task_tag = task_tag|default('') %}
+{% set task_modifiers = task_modifiers|default([]) %}
 {% set task_complete = task_complete|default(0) %}
-{% set p_text = p_text|default('') %}
-{% set p_text = p_text|default('') %}
+{% set task_p_text = task_p_text|default('') %}
+{% set task_date_text = task_date_text|default('') %}
 
 <label class="label">
     <div>
         <div>
             <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
             {% include 'components/atoms/title.html.twig' with {
-                title_text: '',
-                title_tag: '',
+                title_text: task_text,
+                title_tag: task_tag,
                 title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],
             } %}
         </div>
-        {% include 'components/atoms/a.html.twig' with {
-            a_modifiers: task_complete ? ['complete'] : ['uncomplete']
-        } %}
+        {% include ('tache/_delete_form.html.twig') %}
     </div>
     <div class="details">
         {% include 'components/atoms/p.html.twig' with {
-            p_text: '🔴  Très Urgent',
+            p_text: task_p_text,
         } %}
         {% include 'components/atoms/p.html.twig' with {
-            p_text: '03 mai 2023',
+            p_text: task_date_text,
         } %}
     </div>
 </label>
