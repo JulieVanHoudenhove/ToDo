@@ -55,8 +55,11 @@
 body {
   margin: 40px 30px;
   background-color: var(--light);
+  transition: background-color 1s;
 }
-
+.dark-theme {
+  transition: background-color 1s;
+}
 body.dark-theme {
   --purple : #473FA0;
   --darkest:  #FCFCFC;
@@ -68,12 +71,8 @@ body.dark-theme {
   --lightest: #0E0E11;
 }
 
-.dark-theme hr {
-  background-color: var(--darkest)!important;
-}
-
-.dark-theme .checkbox {
-  background-color: var(--gray)!important;
+.dark-theme form {
+  color: var(--darkest);
 }
 
 .dark-theme button {
@@ -118,7 +117,7 @@ form {
       font-size: var(--font-size-p);
       color: var(--dark-gray);
       border: none;
-      background-color: transparent;
+      background-color: var(--light);
     }
     div {
       display: flex;
