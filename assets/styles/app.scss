@@ -11,13 +11,12 @@
 @import '../../templates/components/atoms/a.style.scss';
 @import '../../templates/components/atoms/hr.style.scss';
 @import '../../templates/components/molecules/header.style.scss';
-@import '../../templates/components/molecules/form.style.scss';
 @import '../../templates/components/molecules/task.style.scss';
 @import '../../templates/components/molecules/article.style.scss';
 
 :root {
   //COLOR
-  --purple : #476FA0;
+  --purple : #473FA0;
   --darkest: #0E0E11;
   --dark : #141414;
   --dark-gray : #575767;
@@ -45,6 +44,7 @@
 }
 
 
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -55,6 +55,29 @@
 body {
   margin: 40px 30px;
   background-color: var(--light);
+}
+
+body.dark-theme {
+  --purple : #473FA0;
+  --darkest:  #FCFCFC;
+  --dark : #F8F8F8;
+  --dark-gray : #DADADA;
+  --gray : #575767;
+  --light-gray : #B9B9BE;
+  --light: #141414;
+  --lightest: #0E0E11;
+}
+
+.dark-theme hr {
+  background-color: var(--darkest)!important;
+}
+
+.dark-theme .checkbox {
+  background-color: var(--gray)!important;
+}
+
+.dark-theme button {
+  color: var(--darkest);
 }
 
 form {
