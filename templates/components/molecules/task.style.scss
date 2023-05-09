@@ -16,8 +16,8 @@
         height: 24px;
         width: 24px;
         border-radius: 6px;
-        border: 2px solid #dadada;
-        background-color: #fcfcfc;
+        border: 2px solid var(--light-gray);
+        background-color: var(--lightest);
         cursor: pointer;
       }
     }
@@ -27,9 +27,9 @@
       margin: 0;
 
       button {
-        color: #b9b9be;
+        color: var(--gray);
         text-decoration: none;
-        font-size: 19px;
+        font-size: var(--font-size-button);
         margin-top: 5px;
         height: 19px;
       }
@@ -43,9 +43,9 @@
     margin: 5px 0 15px 0;
 
     p {
-      font-weight: 600;
-      font-size: 14px;
-      color: #b9b9be;
+      font-weight: var(--font-weight-semi-bold);
+      font-size: var(--font-size-p);
+      color: var(--gray);
     }
   }
 }
@@ -69,16 +69,16 @@
         height: 24px;
         width: 24px;
         border-radius: 6px;
-        border: 2px solid #dadada;
-        background-color: #fcfcfc;
+        border: 2px solid var(--gray);
+        background-color: var(--lightest);
         cursor: pointer;
       }
 
       h2 {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-        color: #b9b9be;
+        font-weight: var(--font-weight-medium);
+        font-size: var(--font-size-h2);
+        line-height: var(--font-line-height-h2);
+        color: var(--gray);
         margin-left: 10px;
       }
     }
@@ -88,9 +88,9 @@
       margin: 0;
 
       button {
-        color: #575767;
+        color: var(--dark-gray);
         text-decoration: none;
-        font-size: 19px;
+        font-size: var(--font-size-button);
         margin-top: 5px;
         height: 19px;
       }
@@ -104,9 +104,9 @@
     margin: 5px 0 15px 0;
 
     p {
-      font-weight: 600;
-      font-size: 14px;
-      color: #b9b9be;
+      font-weight: var(--font-weight-semi-bold);
+      font-size: var(--font-size-p);
+      color: var(--gray);
     }
   }
 
