@@ -1,6 +1,6 @@
 .p {
-  font-weight: 600;
-  font-size: 14px;
-  color: #b9b9be;
+  font-weight: var(--font-weight-semi-bold);
+  font-size: var(--font-size-p);
+  color: var(--gray);
   width: 103px;
 }

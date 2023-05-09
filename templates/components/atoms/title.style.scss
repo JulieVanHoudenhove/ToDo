@@ -2,31 +2,31 @@
   font-family: 'Inter', sans-serif;
 
   &--xs {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 18px;
-    color: #f2f2f2;
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-line-height-h3);
+    color: var(--light);
   }
 
   &--md {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24px;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-h2);
+    line-height: var(--font-line-height-h2);
     margin-left: 10px;
   }
 
   &--lg {
-    font-weight: 700;
-    font-size: 32px;
-    color: #0E0E11;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h1);
+    color: var(--darkest);
     text-shadow: (0 3px 7px rgba($color: #000000, $alpha: .25));
   }
 
   &--uncomplete {
-    color: #575767;
+    color: var(--dark-gray);
   }
 
   &--complete {
-    color: #b9b9be;
+    color: var(--gray);
   }
 }
