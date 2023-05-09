@@ -1,8 +1,16 @@
-{#{% if from is defined %}#}
-
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_errors(form.title) }}
+    {{ form_widget(form.title) }}
+    <hr>
+    <div>
+        {{ form_label(form.priority) }}
+        {{ form_errors(form.priority) }}
+        {{ form_widget(form.priority) }}
+        <div>
+            {{ form_label(form.date) }}
+            {{ form_errors(form.date) }}
+            {{ form_widget(form.date) }}
+        </div>
+        <button>+</button>
+    </div>
 {{ form_end(form) }}
-
-{#{% endif %}#}

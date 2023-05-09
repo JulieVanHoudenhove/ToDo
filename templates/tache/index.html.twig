@@ -3,74 +3,35 @@
 {% block title %}Tache index{% endblock %}
 
 {% block body %}
-    <h1>Tache index</h1>
-
-{#    {% include 'components/atoms/title.html.twig' with {#}
-{#        title_text: 'Bonjour H1',#}
-{#        title_tag: 'h1',#}
-{#        title_modifiers: ['lg ', 'complete'],#}
-{#    } %}#}
-
-{#    {% include 'components/atoms/p.html.twig' with {#}
-{#        p_text: 'Bonjour un paragraphe Lorem Ipsum',#}
-{#    } %}#}
-
-{#    {% include 'components/atoms/button.html.twig' with {#}
-{#        button_text: '+',#}
-{#    } %}#}
-
-{#    {% include 'components/atoms/i.html.twig' %}#}
-
-{#    {% include 'components/atoms/a.html.twig' with {#}
-{#        a_modifiers: ['uncomplete'],#}
-{#    } %}#}
-
-{#    {% include 'components/atoms/a.html.twig' with {#}
-{#        a_modifiers: ['complete'],#}
-{#    } %}#}
-
-{#    {% include 'components/molecules/header.html.twig' %}#}
-
-{#    {% include 'components/molecules/form.html.twig' %}#}
-
-{#    {% include 'components/molecules/task.html.twig' %}#}
-
-{#    {% include 'components/molecules/article.html.twig' %}#}
-
-    <br><br><br>
     {{ include ('components/molecules/header.html.twig') }}
-{#    {{ include ('components/molecules/form.html.twig') }}#}
     {{ include ('tache/_form.html.twig') }}
-    {{ include ('components/molecules/article.html.twig') }}
 
-    <table class="table">
-        <tbody>
-        {% for tache in taches %}
-{#            {% embed "components/molecules/task.html.twig" with {#}
-{#                'title_text': 'tache_text',#}
-{#                title_tag: 'h2',#}
-{#                title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],#}
-{#                a_modifiers: task_complete ? ['complete'] : ['uncomplete'],#}
-{#                p_text: 'tache.priority',#}
-{#                p_text: 'tache.date|date(\'d m Y\')',#}
-{#            } %}{% endembed %}#}
-            <tr>
-                <td>{{ tache.title }}</td>
-                <td>{{ tache.priority }}</td>
-                <td>{{ tache.date ? tache.date|date('d m Y') : '' }}</td>
-                <td>
-{#                    <a href="{{ path('app_tache_show', {'id': tache.id}) }}">show</a>#}
-{#                    <a href="{{ path('app_tache_edit', {'id': tache.id}) }}">edit</a>#}
-                    {% include ('tache/_delete_form.html.twig') %}
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    <section>
+    {% for tache in taches %}
+{#        {{ include ('components/molecules/task.html.twig') }}#}
+{#             {% embed "components/molecules/task.html.twig" with #}
+    {#                'title_text': 'tache_text',#}
+    {#                title_tag: 'h2',#}
+    {#                title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],#}
+    {#                a_modifiers: task_complete ? ['complete'] : ['uncomplete'],#}
+    {#                p_text: 'tache.priority',#}
+    {#                p_text: 'tache.date|date(\'d m Y\')',#}
+    {#            } %}{% endembed %}#}
+        <label class="uncomplete">
+            <div>
+                <div>
+                    <input class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+                    <h2>{{ tache.title }}</h2>
+                </div>
+                {{ include ('tache/_delete_form.html.twig') }}
+            </div>
+            <div class="details">
+                <p>{{ tache.priority }}</p>
+                <p>{{ tache.date ? tache.date|date('d/m/Y') : '' }}</p>
+            </div>
 
-{#    <a href="{{ path('app_tache_new') }}">Create new</a>#}
+        </label>
+    {% endfor %}
+    </section>
+{#    {{ include ('components/molecules/article.html.twig') }}#}
 {% endblock %}

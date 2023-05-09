@@ -18,6 +18,7 @@ class TacheType extends AbstractType
         $builder
             ->add('title', TextType::class, [
                 'label' => false,
+                'required' => true,
                 'attr' => [
                     'placeholder' => 'Je dois faire...',
                 ],
@@ -25,6 +26,7 @@ class TacheType extends AbstractType
             ->add('priority', ChoiceType::class, [
                 'label' => false,
                 'placeholder' => 'Urgence de la tâche',
+                'required' => true,
                 'choices' => [
                     '🔴  Très Urgent' => '🔴  Très Urgent',
                     '🟠  Urgent' => '🟠  Urgent',
@@ -37,11 +39,12 @@ class TacheType extends AbstractType
                 'data' => '0',
             ])
             ->add('date', DateType::class, [
+                'required' => true,
                 'label' => '🗓️',
                 'widget' => 'single_text',
                 'attr' => ['class' => 'js-datepicker'],
                 'html5' => false,
-                'format' => 'dd MM yyyy',
+                'format' => 'dd/MM/yyyy',
                 'data' => new \DateTime('now'),
             ])
         ;
