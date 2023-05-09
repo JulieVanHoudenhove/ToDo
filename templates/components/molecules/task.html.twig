@@ -9,11 +9,26 @@
 <div x-data="{
     isCheck() {
         axios.get('http://localhost:8000/api/taches/'+{{task_id}} )
-        console.log(axios.get('http://localhost:8000/api/taches/'+{{ task_id }}))
+        .then(function (response) {
+            console.log(response.data.checked);
+            if (response.data.checked == false) {
+                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {
+                    checked: true
+                })
+                removeClass('uncomplete');
+                addClass('complete');
+            } else {
+                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {
+                    checked: false
+                })
+                removeClass('complete');
+                addClass('uncomplete');
+            }
+        })
     }}
 ">
 
-<label class="label">
+<label class="uncomplete">
     <div>
         <div>
             <input x-on:change="isCheck" class="checkbox" type="checkbox" name="checkbox" id="checkbox">
