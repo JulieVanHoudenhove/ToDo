@@ -53,7 +53,7 @@
 
 body {
   margin: 40px 30px;
-  background-color: #f8f8f8;
+  background-color: var(--light);
 }
 
 form {
@@ -67,9 +67,9 @@ form {
 
 
   #tache_title {
-    font-weight: 600;
-    font-size: 14px;
-    color: #575767;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-p);
+    color: var(--dark-gray);
     border: none;
     width: 100%;
     background-color: transparent;
@@ -77,7 +77,7 @@ form {
 
 
   hr {
-    background-color: #575767;
+    background-color: var(--dark-gray);
     margin: 10px 0;
     width: 100%;
   }
@@ -90,9 +90,9 @@ form {
     width: 100%;
 
     #tache_priority {
-      font-weight: 600;
-      font-size: 14px;
-      color: #575767;
+      font-weight: var(--font-weight-semi-bold);
+      font-size: var(--font-size-p);
+      color: var(--dark-gray);
       border: none;
       background-color: transparent;
     }
@@ -103,9 +103,9 @@ form {
       width: 26%;
 
       #tache_date {
-        color: #575767;
-        font-weight: 600;
-        font-size: 14px;
+        color: var(--dark-gray);
+        font-weight: var(--font-weight-semi-bold);
+        font-size: var(--font-size-p);
         cursor: pointer;
         border: none;
         background-color: transparent;
@@ -117,10 +117,10 @@ form {
     button {
       height: 35px;
       width: 35px;
-      background-color: #515cc6;
-      color: #fff;
+      background-color: var(--purple);
+      color: var(--lightest);
       // font-size: 20px;
-      border: 2px solid #515cc6;
+      border: 2px solid var(--purple);
       border-radius: 50%;
       text-align: center;
       cursor: pointer;
