@@ -39,8 +39,8 @@
 
     <br><br><br>
     {{ include ('components/molecules/header.html.twig') }}
-    {{ include ('components/molecules/form.html.twig') }}
-
+{#    {{ include ('components/molecules/form.html.twig') }}#}
+    {{ include ('tache/_form.html.twig') }}
     {{ include ('components/molecules/article.html.twig') }}
 
     <table class="table">
@@ -55,14 +55,13 @@
 {#                p_text: 'tache.date|date(\'d m Y\')',#}
 {#            } %}{% endembed %}#}
             <tr>
-                <td>{{ tache.id }}</td>
                 <td>{{ tache.title }}</td>
                 <td>{{ tache.priority }}</td>
-                <td>{{ tache.checked ? 'Yes' : 'No' }}</td>
                 <td>{{ tache.date ? tache.date|date('d m Y') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_tache_show', {'id': tache.id}) }}">show</a>
-                    <a href="{{ path('app_tache_edit', {'id': tache.id}) }}">edit</a>
+{#                    <a href="{{ path('app_tache_show', {'id': tache.id}) }}">show</a>#}
+{#                    <a href="{{ path('app_tache_edit', {'id': tache.id}) }}">edit</a>#}
+                    {% include ('tache/_delete_form.html.twig') %}
                 </td>
             </tr>
         {% else %}
@@ -73,5 +72,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_tache_new') }}">Create new</a>
+{#    <a href="{{ path('app_tache_new') }}">Create new</a>#}
 {% endblock %}

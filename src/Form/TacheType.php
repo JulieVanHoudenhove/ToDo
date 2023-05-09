@@ -24,12 +24,12 @@ class TacheType extends AbstractType
             ])
             ->add('priority', ChoiceType::class, [
                 'label' => false,
+                'placeholder' => 'Urgence de la tâche',
                 'choices' => [
-                    '' => 'Urgence de la tâche',
-                    '🔴  Très Urgent' => '1',
-                    '🟠  Urgent' => '2',
-                    '🟡  Peu Urgent' => '3',
-                    '🟢  Pas Urgent' => '4',
+                    '🔴  Très Urgent' => '🔴  Très Urgent',
+                    '🟠  Urgent' => '🟠  Urgent',
+                    '🟡  Peu Urgent' => '🟡  Peu Urgent',
+                    '🟢  Pas Urgent' => '🟢  Pas Urgent',
                 ],
             ])
             ->add('checked', HiddenType::class, [
