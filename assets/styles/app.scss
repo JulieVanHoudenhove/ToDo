@@ -15,6 +15,35 @@
 @import '../../templates/components/molecules/task.style.scss';
 @import '../../templates/components/molecules/article.style.scss';
 
+:root {
+  //COLOR
+  --purple : #476FA0;
+  --darkest: #0E0E11;
+  --dark : #141414;
+  --dark-gray : #575767;
+  --gray : #B9B9BE;
+  --light-gray : #DADADA;
+  --light: #F8F8F8;
+  --lightest: #FCFCFC;
+
+  //FONT-SIZE
+  --font-size-h1 : 32px;
+  --font-size-h2 : 18px;
+  --font-size-h3 : 18px;
+  --font-size-p : 14px;
+  --font-size-placeholder : 14px;
+
+  //FONT-WEIGHT
+  --font-weight-bold : 700;
+  --font-weight-semi-bold : 600;
+  --font-weight-medium : 500;
+
+  //FONT-LINE-HEIGHT
+  --font-line-height-h2 : 24px;
+  --font-line-height-h3 : 18px;
+}
+
+
 * {
   font-family: "Inter", sans-serif;
   margin: 0;
