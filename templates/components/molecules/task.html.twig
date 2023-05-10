@@ -31,17 +31,18 @@
             this.updateTask();
         })
     }
-    }
-">
+}">
 
 <label :class="isChecked ? 'complete' : 'uncomplete'">
     <div>
         <div>
-            <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked" class="checkbox" type="checkbox" name="checkbox" id="checkbox">
+            <div class="checkbox-wrapper-13">
+                <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked"  type="checkbox" id="c1-13">
+            </div>
+{#            <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked" class="checkbox" type="checkbox" name="checkbox" id="checkbox">#}
             {% include 'components/atoms/title.html.twig' with {
                 title_text: task_text,
                 title_tag: task_tag,
-                title_modifiers: task_complete ? ['complete', 'md'] : ['uncomplete', 'md'],
             } %}
         </div>
         {% include ('tache/_delete_form.html.twig') %}
@@ -55,5 +56,4 @@
         } %}
     </div>
 </label>
-
 </div>
