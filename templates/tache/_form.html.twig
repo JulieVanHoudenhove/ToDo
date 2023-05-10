@@ -3,7 +3,7 @@
     {{ form_widget(form.title) }}
     <hr>
     <div>
-        {{ form_label(form.priority) }}
+        {{ form_label(form.priority, { 'attr' : { 'class' : 'options'}}) }}
         {{ form_errors(form.priority) }}
         {{ form_widget(form.priority) }}
         <div>
@@ -11,6 +11,6 @@
             {{ form_errors(form.date) }}
             {{ form_widget(form.date) }}
         </div>
-        <button><p>+</p></button>
+        <button><i class="fa-regular fa-plus"></i></button>
     </div>
 {{ form_end(form) }}

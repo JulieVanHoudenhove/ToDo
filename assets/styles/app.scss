@@ -16,6 +16,7 @@
 :root {
   //COLOR
   --purple : #6871f1;
+  --dark-purple: rgba(45, 49, 128, 0.9);
   --darkest: #0E0E11;
   --dark : #141414;
   --dark-gray : #575767;
@@ -60,6 +61,7 @@ body {
   transition: background-color 1s;
 }
 body.dark-theme {
+  --dark-purple: rgba(45, 49, 128, 0.9);
   --purple : #6871f1;
   --darkest:  #FCFCFC;
   --dark : #F8F8F8;
@@ -86,6 +88,7 @@ form {
   justify-content: space-between;
   align-items: center;
   margin: 5px;
+  transition: background-color 0.8s;
 
 
   #tache_title {
@@ -116,8 +119,18 @@ form {
       font-size: var(--font-size-p);
       color: var(--dark-gray);
       border: none;
-      background-color: var(--light);
-      transition: background-color 0.8s;
+      background-color: transparent;
+      padding: 5px;
+
+      option {
+        font-weight: var(--font-weight-semi-bold);
+        font-size: var(--font-size-p);
+        color: var(--dark-gray);
+        border: none;
+        background-color: var(--light);
+        transition: background-color 0.8s;
+        padding: 5px;
+      }
     }
     div {
       display: flex;
@@ -149,10 +162,8 @@ form {
       text-align: center;
       cursor: pointer;
 
-      p {
-        font-size: 34px;
-        font-weight: var(--font-weight-medium);
-        padding-bottom: 3px;
+      i {
+        font-size: 20px;
       }
     }
   }

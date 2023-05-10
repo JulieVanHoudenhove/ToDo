@@ -105,13 +105,13 @@
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .checkbox-wrapper-13 input[type=checkbox] {
     --active: var(--purple);
-    --active-inner: #fff;
-    --focus: 2px rgba(39, 94, 254, .3);
-    --border: #BBC1E1;
+    --active-inner: #fcfcfc;
+    --focus: var(--dark-purple);
+    --border: var(--gray);
     --border-hover: var(--purple);
     --background: var(--gray);
-    --disabled: #F6F8FF;
-    --disabled-inner: #E1E6F9;
+    --disabled: var(--light);
+    --disabled-inner: var(--light-gray);
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 24px;
