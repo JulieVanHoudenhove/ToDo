@@ -8,7 +8,6 @@
 @import '../../templates/components/atoms/title.style.scss';
 @import '../../templates/components/atoms/p.style.scss';
 @import '../../templates/components/atoms/i.style.scss';
-@import '../../templates/components/atoms/a.style.scss';
 @import '../../templates/components/atoms/hr.style.scss';
 @import '../../templates/components/molecules/header.style.scss';
 @import '../../templates/components/molecules/task.style.scss';
@@ -16,7 +15,7 @@
 
 :root {
   //COLOR
-  --purple : #473FA0;
+  --purple : #6871f1;
   --darkest: #0E0E11;
   --dark : #141414;
   --dark-gray : #575767;
@@ -61,7 +60,7 @@ body {
   transition: background-color 1s;
 }
 body.dark-theme {
-  --purple : #473FA0;
+  --purple : #6871f1;
   --darkest:  #FCFCFC;
   --dark : #F8F8F8;
   --dark-gray : #DADADA;
@@ -118,6 +117,7 @@ form {
       color: var(--dark-gray);
       border: none;
       background-color: var(--light);
+      transition: background-color 0.8s;
     }
     div {
       display: flex;
@@ -136,17 +136,24 @@ form {
       }
     }
 
-
     button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 35px;
       width: 35px;
       background-color: var(--purple);
       color: var(--lightest);
-      // font-size: 20px;
       border: 2px solid var(--purple);
       border-radius: 50%;
       text-align: center;
       cursor: pointer;
+
+      p {
+        font-size: 34px;
+        font-weight: var(--font-weight-medium);
+        padding-bottom: 3px;
+      }
     }
   }
 

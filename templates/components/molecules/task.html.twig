@@ -6,21 +6,6 @@
 {% set task_date_text = task_date_text|default('') %}
 {% set task_id = task_id|default('') %}
 
-{#        axios.get('http://localhost:8000/api/taches/'+{{task_id}} )#}
-{#        .then(function (response) {#}
-{#            console.log(response.data.checked);#}
-{#            if (response.data.checked == false) {#}
-{#                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {#}
-{#                    checked: true#}
-{#                })#}
-
-{#            } else {#}
-{#                axios.put('http://localhost:8000/api/taches/'+{{task_id}}, {#}
-{#                    checked: false#}
-{#                })#}
-{#            }#}
-{#        })#}
-
 <div x-data="{
     isChecked: {{ task_complete ? 'true' : 'false' }},
     updateTask() {
@@ -39,7 +24,6 @@
             <div class="checkbox-wrapper-13">
                 <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked"  type="checkbox" id="c1-13">
             </div>
-{#            <input {% if task_complete %}checked="checked"{% endif %} @change="isChecked = $el.checked" class="checkbox" type="checkbox" name="checkbox" id="checkbox">#}
             {% include 'components/atoms/title.html.twig' with {
                 title_text: task_text,
                 title_tag: task_tag,

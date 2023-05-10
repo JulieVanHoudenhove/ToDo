@@ -13,14 +13,6 @@
 
       margin-top: 0;
 
-      .checkbox {
-        height: 24px;
-        width: 24px;
-        border-radius: 6px;
-        border: 2px solid var(--light-gray);
-        background-color: var(--lightest);
-        cursor: pointer;
-      }
       h2 {
         color: var(--dark-gray);
         font-weight: var(--font-weight-medium);
@@ -73,15 +65,6 @@
 
       margin-top: 0;
 
-      .checkbox {
-        height: 24px;
-        width: 24px;
-        border-radius: 6px;
-        border: 2px solid var(--gray);
-        background-color: var(--lightest);
-        cursor: pointer;
-      }
-
       h2 {
         color: var(--gray);
         font-weight: var(--font-weight-medium);
@@ -121,11 +104,11 @@
 }
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .checkbox-wrapper-13 input[type=checkbox] {
-    --active: #6871f1;
+    --active: var(--purple);
     --active-inner: #fff;
     --focus: 2px rgba(39, 94, 254, .3);
     --border: #BBC1E1;
-    --border-hover: #6871f1;
+    --border-hover: var(--purple);
     --background: var(--gray);
     --disabled: #F6F8FF;
     --disabled-inner: #E1E6F9;
