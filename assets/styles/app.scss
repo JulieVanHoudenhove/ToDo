@@ -126,10 +126,10 @@ form {
         font-weight: var(--font-weight-semi-bold);
         font-size: var(--font-size-p);
         color: var(--dark-gray);
-        border: none;
         background-color: var(--light);
         transition: background-color 0.8s;
         padding: 5px;
+        border-bottom: 1px solid var(--purple);
       }
     }
     div {
