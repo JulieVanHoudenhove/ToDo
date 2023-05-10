@@ -42,7 +42,7 @@ class TacheType extends AbstractType
                 'required' => true,
                 'label' => '🗓️',
                 'widget' => 'single_text',
-                'attr' => ['class' => 'js-datepicker'],
+                'attr' => ['data-id' => 56467852641654],
                 'html5' => false,
                 'format' => 'dd/MM/yyyy',
                 'data' => new \DateTime('now'),

@@ -6,11 +6,17 @@
         {{ form_label(form.priority) }}
         {{ form_errors(form.priority) }}
         {{ form_widget(form.priority) }}
-        <div>
-            {{ form_label(form.date) }}
+
+        <div x-data>
+            <div @change="({ detail }) => $refs.date.value = detail" data-ref="datepicker" data-id="{{ form.date.vars.attr['data-id'] }}" class="!w-[150px]"></div>
             {{ form_errors(form.date) }}
-            {{ form_widget(form.date) }}
+            <div class="hidden">
+                {{ form_widget(form.date, {attr: {
+                    'x-ref': 'date',
+                }}) }}
+            </div>
         </div>
+
         <button><i class="fa-regular fa-plus"></i></button>
     </div>
 {{ form_end(form) }}
