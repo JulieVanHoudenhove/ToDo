@@ -98,6 +98,7 @@ form {
     border: none;
     width: 100%;
     background-color: transparent;
+    padding: 5px 10px;
   }
 
 
@@ -167,5 +168,44 @@ form {
       }
     }
   }
+}
 
+.el-picker__popper.el-popper {
+  background: var(--light);
+  border: 1px solid var(--gray);
+}
+
+.el-input__wrapper{
+  background:transparent;
+  color: (--dark);
+  border: 1px solid var(--gray);
+  box-shadow: none;
+}
+
+.el-input__wrapper:hover{
+  box-shadow: none;
+}
+
+.el-popper.is-light .el-popper__arrow::before {
+  border-color: var(--gray);
+  background: var(--dark);
+}
+
+.el-picker-panel__body, .el-input__wrapper:hover {
+  background: var(--light);
+}
+
+.el-picker-panel__icon-btn .el-icon, .el-date-picker__header-label, .el-date-table th, .el-picker-panel, .el-input__inner {
+  color: var(--dark);
+}
+
+.el-date-table td.next-month, .el-date-table td.prev-month {
+    color: var(--gray);
+}
+
+.el-date-table td.current:not(.disabled) .el-date-table-cell__text {
+  background: var(--purple);
+}
+.el-date-table td.available:hover,.el-date-picker__header-label:hover {
+  color: var(--purple);
 }
